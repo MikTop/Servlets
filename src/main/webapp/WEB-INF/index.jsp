@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <html>
@@ -21,19 +22,38 @@
     <button name="save" type="submit">Save</button>
 </form>
 
-    <ul>
+    <table border="1">
+        <caption>Список юзеров</caption>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Change user</th>
+            <th>Delete user</th>
+        </tr>
         <c:forEach var="user" items="${requestScope.users}">
-            <li>
-                <p>
-                    <span>Id:${user.id} </span>
-                    <span>First Name:${user.firstName}</span>
-                    <span>Last Name:${user.lastName}</span>
-                    <span>Age:${user.age}</span>
+            <tr>
+                <form action="${pageContext.request.contextPath}/change" method="post">
+                    <td><input type="hidden" name="id" value="${user.id}" >${user.id}</td>
+                    <td><input type="text" name="firstName" value="${user.firstName}" ></td>
+                    <td><input type="text" name="lastName" value="${user.lastName}" ></td>
+                    <td><input type="text" name="age" value="${user.age}" ></td>
+                    <td><button type="submit">Change User</button></td>
 
-                </p>
-            </li>
+                </form>
+                <td><form action="${pageContext.request.contextPath}/delete" method="post">
+                    <input type="hidden" name="userId" value="${user.id}">
+                    <button type="submit">Delete user</button>
+                </form></td>
+
+            </tr>
         </c:forEach>
-    </ul>
+
+
+    </table>
+
+
 
 
 </body>

@@ -17,6 +17,13 @@ public class UserDAO {
 
     private static final String SQL_SAVE = "INSERT INTO users (first_name, last_name, age)" +
             " VALUES (?, ?, ?)";
+    private static final String SQL_UPDATE = "UPDATE users "+
+            "SET first_name = ?, "+
+            "last_name = ?, "+
+            "age = ? "+
+            "WHERE id = ?";
+    private static final String SQL_DELETE = "DELETE FROM users "+
+            "WHERE id = ?";
 
 
     @SneakyThrows
@@ -43,23 +50,44 @@ public class UserDAO {
     }
 
     @SneakyThrows
-    public void save(User entity) {
+    public void update(User entity) {
         try(Connection connection = ConnectionManager.openConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(SQL_SAVE)){
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_UPDATE)){
+            preparedStatement.setObject(1, entity.getFirstName());
+            preparedStatement.setObject(2, entity.getLastName());
+            preparedStatement.setObject(3, entity.getAge());
+            preparedStatement.setObject(4, entity.getId());
+
+
+            preparedStatement.executeUpdate();
+
+        }
+
+    }
+    @SneakyThrows
+    public void save (User entity) {
+        try (Connection connection = ConnectionManager.openConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SQL_SAVE)) {
             preparedStatement.setObject(1, entity.getFirstName());
             preparedStatement.setObject(2, entity.getLastName());
             preparedStatement.setObject(3, entity.getAge());
 
 
+            preparedStatement.executeUpdate();
+
+        }
+    }
+
+    @SneakyThrows
+    public void delete (Integer id){
+        try (Connection connection = ConnectionManager.openConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SQL_DELETE)) {
+
+            preparedStatement.setObject(1, id);
 
             preparedStatement.executeUpdate();
 
-
-
-
-
         }
-
     }
     public static UserDAO getInctance (){
         return INCTANCE;
