@@ -25,7 +25,10 @@
         <c:forEach var="user" items="${requestScope.users}">
             <li>
                 <p>
-                    <span>Id:${user.id} First Name:${user.firstName} Last Name:${user.lastName}  Age:${user.age}</span><br>
+                    <span>Id:${user.id} </span>
+                    <span>First Name:${user.firstName}</span>
+                    <span>Last Name:${user.lastName}</span>
+                    <span>Age:${user.age}</span>
 
                 </p>
             </li>
