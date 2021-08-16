@@ -5,7 +5,7 @@
 
 <body>
 
-<form action="${pageContext.request.contextPath}/"   method="post">
+<form action="${pageContext.request.contextPath}/" method="post">
 
     <label>First Name:
         <input name="firstName" type="text"  required>

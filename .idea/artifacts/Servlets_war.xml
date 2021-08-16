@@ -1,13 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="Servlets:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <properties id="maven-jee-properties">
-      <options>
-        <module>Servlets</module>
-        <packaging>war</packaging>
-      </options>
-    </properties>
-    <root id="archive" name="Servlets-1.0-SNAPSHOT.war">
+    <output-path>$PROJECT_DIR$/out/artifacts/Servlets_war1</output-path>
+    <root id="archive" name="Servlets_war.war">
       <element id="artifact" artifact-name="Servlets:war exploded" />
     </root>
   </artifact>

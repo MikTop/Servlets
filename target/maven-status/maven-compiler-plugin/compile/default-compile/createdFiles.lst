@@ -1,0 +1,6 @@
+com\servlets\PropertiesUtil.class
+com\servlets\User.class
+com\servlets\ConnectionManager.class
+com\servlets\User$UserBuilder.class
+com\servlets\UserServlet.class
+com\servlets\UserDAO.class
