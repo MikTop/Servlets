@@ -1,4 +1,4 @@
-package com.servlets;
+package com.servlets.entity;
 
 import lombok.Builder;
 import lombok.Data;

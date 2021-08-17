@@ -1,5 +1,7 @@
-package com.servlets;
+package com.servlets.dao;
 
+import com.servlets.entity.User;
+import com.servlets.util.ConnectionManager;
 import lombok.SneakyThrows;
 
 import java.sql.Connection;
@@ -30,8 +32,7 @@ public class UserDAO {
     public List<User> findAll() {
         try (Connection connection = ConnectionManager.openConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND_ALL)) {
-
-
+            connection.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
             ResultSet resultSet = preparedStatement.executeQuery();
             List<User> users = new ArrayList<>();
             while (resultSet.next()) {
@@ -53,6 +54,7 @@ public class UserDAO {
     public void update(User entity) {
         try(Connection connection = ConnectionManager.openConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(SQL_UPDATE)){
+            connection.setTransactionIsolation(Connection.TRANSACTION_REPEATABLE_READ);
             preparedStatement.setObject(1, entity.getFirstName());
             preparedStatement.setObject(2, entity.getLastName());
             preparedStatement.setObject(3, entity.getAge());
@@ -68,6 +70,7 @@ public class UserDAO {
     public void save (User entity) {
         try (Connection connection = ConnectionManager.openConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(SQL_SAVE)) {
+
             preparedStatement.setObject(1, entity.getFirstName());
             preparedStatement.setObject(2, entity.getLastName());
             preparedStatement.setObject(3, entity.getAge());

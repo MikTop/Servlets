@@ -1,4 +1,4 @@
-package com.servlets;
+package com.servlets.util;
 
 import lombok.SneakyThrows;
 

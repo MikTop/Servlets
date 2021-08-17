@@ -10,19 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a77d99a-a400-451a-94fd-7bd1b0e19e00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlets/ChangeServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/servlets/DeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlets/ChangeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlets/servlet/ChangeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlets/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlets/util/ConnectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlets/DeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlets/servlet/DeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlets/PropertiesUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlets/util/PropertiesUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/servlets/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlets/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/servlets/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/servlets/servlet/UserServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/dbProperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbProperties.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Servlets-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Servlets-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Servlets-1.0-SNAPSHOT/WEB-INF/classes/com/servlets/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Servlets-1.0-SNAPSHOT/WEB-INF/classes/com/servlets/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Servlets-1.0-SNAPSHOT/WEB-INF/classes/dbProperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/Servlets-1.0-SNAPSHOT/WEB-INF/classes/dbProperties.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Servlets-1.0-SNAPSHOT/WEB-INF/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Servlets-1.0-SNAPSHOT/WEB-INF/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/servlets/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/servlets/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dbProperties.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbProperties.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +58,9 @@
       </list>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1wmDv9yvTpd5ea5KelqGyflw4Tw" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
@@ -76,9 +77,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.38792104" />
+    <property name="project.structure.side.proportion" value="0.092801385" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -90,15 +91,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -201,6 +200,7 @@
       <option name="presentableId" value="Default" />
       <updated>1629055099926</updated>
       <workItem from="1629055101060" duration="9884000" />
+      <workItem from="1629195143905" duration="1900000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1629062260984</created>
@@ -251,7 +251,28 @@
       <option name="project" value="LOCAL" />
       <updated>1629140822882</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="commit2.1">
+      <created>1629148779543</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1629148779543</updated>
+    </task>
+    <task id="LOCAL-00009" summary="commit2.1">
+      <created>1629148928875</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1629148928875</updated>
+    </task>
+    <task id="LOCAL-00010" summary="commit2.2">
+      <created>1629148962971</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1629148962971</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +298,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
@@ -284,18 +306,25 @@
     <MESSAGE value="commit2" />
     <MESSAGE value="commit2." />
     <MESSAGE value="commit2.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit2.1" />
+    <MESSAGE value="commit2.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit2.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/servlets/UserServlet.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/index.jsp</url>
+          <line>36</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="((java.util.concurrent.ConcurrentHashMap)this.attributes).entrySet().toArray()[0]" custom="javax.servlet.http.HttpServletRequest,javax.servlet.jsp.PageContext,javax.servlet.http.HttpServletRequestWrapper,java.util.concurrent.ConcurrentHashMap" />
+        <watch expression="this.wrapperClass" custom="javax.servlet.jsp.PageContext,javax.servlet.http.HttpServletRequestWrapper,javax.management.NotificationEmitter" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
